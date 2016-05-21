@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <header>
+    <meta charset="UTF-8">
+    <title>See RPN in action</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='global.css' rel='stylesheet' type='text/css'>  
+  </header>
+  <body class="site">
+    <div class="site-items stack-container">
+      <div class="intro off">
+        <h2 id="intro-1"><span>Reverse Polish notation (RPN)</span> is a mathematical notation in which every operator follows all of its operands. <span>bla bla blah...</span> The reverse Polish scheme was proposed in 1954 by Burks, Warren, and Wright and was independently reinvented by F. L. Bauer and E. W. Dijkstra in the early 1960s to reduce computer memory access and utilize the <span>stack</span> to evaluate expressions.</h2>
+        <h4 id="intro-2">- Wikipedia</h4>
+        <h2 id="intro-3">I need to see it in action.</h2>
+        <h4 id="intro-4">- Me</h4>
+      </div>     
+      <div class="stack off" style="right:1%"></div>
+      <div class="stack off" style="left:1%"></div>
+      <div class="stack off" style="right:3%"></div>
+    </div>
+    <div class="site-items input-container off">
+      <input type="text" name="calc-input" id="calc-input" class="input-fields" placeholder="0-9+-/*">
+      <button type="submit" id="submit" class="input-fields">STACK!</button>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="rpnCalculator.js"></script>
+    <script>
+      $(function() {
+        var calculator = new RPNCalculator();
+        $(".intro, .input-container").toggleClass("off");
+        $("#submit").click(function() {
+          calculator.inputSubmission();
+        });
+        $("#calc-input").keypress(function(e) {
+          if(e.which == 13) {
+            // enter key pressed
+            $("#submit").click();
+          }
+        });
+      })
+    </script>
+  </body>
+</html>
