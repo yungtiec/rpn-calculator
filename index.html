@@ -38,6 +38,9 @@
         $("#submit").click(function() {
           calculator.inputSubmission();
         });
+        $("#reset").click(function() {
+          calculator.resetCalc();
+        })
         $("#calc-input").keypress(function(e) {
           if(e.which == 13) {
             // enter key pressed

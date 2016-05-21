@@ -125,7 +125,7 @@ function RPNCalculator() {
     var rand = generateRandNumber();
     var pos = rand + "%";
     $("<div/>", {
-      "class": "stack",
+      "class": "stack added",
       text: input
     }).appendTo('.stack-container');
     $(".stack:nth-last-child(1)").css(
@@ -162,6 +162,13 @@ function RPNCalculator() {
         thisProto.fallIn();
       });
     });
+  }
+
+  RPNCalculatorProto.resetCalc = function() {
+    this.stack = [];
+    $(".added").remove();
+    $(".intro").toggleClass("off");
+    $(".stack").addClass("off");
   }
 
 }) (RPNCalculator.prototype)
