@@ -66,7 +66,7 @@ html, body, input, button, div {
   text-align: right;
 }
 input,button {
-  height: 8vh;
+  height: 33%;
   font-size: 3vh;
   border-style: solid;
   border-color: #fae03c;
@@ -87,7 +87,8 @@ input:focus {
   padding: 5px;
   font-size: 90%;
   color: #034f84;
-  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -95,14 +96,16 @@ input:focus {
   padding: 5px;
   font-size: 90%;
   color: #034f84;
-  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
   padding: 5px;
   font-size: 90%;
   color: #034f84;
-  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -110,11 +113,13 @@ input:focus {
   padding: 5px;
   font-size: 90%;
   color: #034f84;
-  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
 }
 button {
-  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 4vh;
   width: 18vw;
   background-color: white;
